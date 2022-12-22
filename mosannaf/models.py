@@ -1,7 +1,7 @@
 from django.db import models
 
-from publisher.models import Publisher
-from printinghouse.models import PrintingHouse
+# from publisher.models import Publisher
+# from printinghouse.models import PrintingHouse
 
 # Create your models here
 
@@ -84,8 +84,8 @@ class Mosannaf(models.Model):
     checker = models.CharField(max_length=200, verbose_name="المحقق")
     
 
-    publisher = models.ForeignKey(
-        "publisher.Publisher", verbose_name='ناشر', on_delete=models.SET_NULL, blank=True, null=True)
+    # publisher = models.ForeignKey(
+    #     "publisher.Publisher", verbose_name='ناشر', on_delete=models.SET_NULL, blank=True, null=True)
 
     print_year = models.CharField(verbose_name="سنة الطباعة", max_length=20)
     print_number = models.CharField(verbose_name="رقم الطباعة", max_length=20)
@@ -378,7 +378,7 @@ class TranslatedMosannaf(models.Model):
     checker = models.CharField(max_length=200, verbose_name='المحقق')
     
     #12# الناشر
-    publisher = models.ForeignKey(Publisher, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="الناشر")
+    # publisher = models.ForeignKey(Publisher, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="الناشر")
     
     #13# طبعة سنة 
     print_year = models.CharField(verbose_name="سنة الطباعة", max_length=20)
